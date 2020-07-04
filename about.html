@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#dc3545">
+    <!-- manifest file -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!--FirebaseUI-->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
+    <!--Custom CSS-->
+    <link type="text/css" rel="stylesheet" href="custom.css" />
+    <title>The Intelligent Donor</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav" hidden>
+        <a class="navbar-brand" href="index.html">The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tos.html">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                </li>
+            </ul>
+            <span class="navbar-text mr-1" id="userName">                              
+
+            </span>             
+            <button class="btn btn-outline-light my-2 my-sm-0" onclick="signOut();">Sign Out</button>
+        </div>
+    </nav>
+    <div class="container" id="major" hidden>
+        <div class="card-columns" style="margin-top:75px;">
+            <div class="card">
+                <img class="card-img" src="logo-01.png" alt="Company Logo">
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">About Us</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates esse ipsam aliquam laudantium facere quos beatae quae, doloribus ullam reprehenderit atque expedita. Optio sit reprehenderit exercitationem, maxime vitae earum laudantium?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur soluta, architecto error libero eaque ratione, doloribus ipsum dolorem iusto asperiores voluptas a ab inventore maxime quae voluptatibus assumenda molestiae aspernatur.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores? Facilis iusto quo quam eum provident quaerat suscipit aperiam dolorem incidunt molestias nemo, voluptate consequuntur atque nostrum qui blanditiis praesentium.
+                    </p>
+                    <p class="card-text"><small class="text-muted">- Team TID</small></p>
+                </div>
+            </div>
+            <div class="card bg-danger text-white text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates esse ipsam aliquam laudantium
+                        facere quos beatae quae, doloribus ullam reprehenderit atque expedita.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Our Mission</h5>
+                    <p class="card-text">
+                        <ul>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos et nemo, recusandae cum porro culpa hic quis ratione aspernatur possimus quo provident fugiat sequi eum neque laudantium aperiam asperiores tempora!</li>
+                            <li>Debitis tempora delectus culpa explicabo sint cupiditate magni unde eaque veniam! Cumque reiciendis nihil, ipsa qui reprehenderit, porro voluptatem iure in facere numquam sed, vel ullam odio beatae quasi repudiandae.</li>
+                            <li>Amet, libero, porro accusantium eum unde error ducimus beatae nesciunt eveniet ratione aperiam sunt deserunt voluptatibus consequatur saepe expedita rerum. Velit aliquam, iste iure rem omnis modi illum laudantium id.</li>
+                            <li>Nesciunt ad, numquam nisi officiis sed corporis dignissimos architecto eveniet laborum, odit, illum odio? Reprehenderit voluptatum, ad, nostrum quas quasi blanditiis veniam deserunt rem autem harum praesentium ipsam placeat fugit?</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Join Us!</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates esse ipsam aliquam
+                        laudantium
+                        facere quos beatae quae, doloribus ullam reprehenderit atque expedita.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, temporibus earum, quae possimus, culpa doloribus eum maiores nihil in non dolorum laudantium qui. Dolorum perferendis sint maiores eveniet voluptatum ipsa.
+                    </p>
+                    <a href="pinfo.html" class="card-link text-danger">Register Today!</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img.svg" alt="Donate Blood">
+            </div>
+        </div>
+    </div>
+    
+    <div class="mb-5">
+    
+    </div>
+    <!--FireBase integration-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-storage.js"></script>
+
+    <!-- Comment out (or don't include) services that you don't want to use -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-functions.js"></script> -->
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDUxHo9ItDrKydYpKNDnRPVcpyFxfyOwmM",
+            authDomain: "blooddonation-93ff8.firebaseapp.com",
+            databaseURL: "https://blooddonation-93ff8.firebaseio.com",
+            projectId: "blooddonation-93ff8",
+            storageBucket: "blooddonation-93ff8.appspot.com",
+            messagingSenderId: "775166540107"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--Custom JS-->
+    <script src="checklogstatus.js"></script>
+    <script src="signout.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

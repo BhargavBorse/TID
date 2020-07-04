@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#dc3545">
+    <title>The Intelligent Donor</title>
+    <!--Custom CSS-->
+    <link type="text/css" rel="stylesheet" href="custom.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav">
+        <a class="navbar-brand" href="index.html">The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tos.html">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                </li>
+            </ul>
+            <span class="navbar-text mr-1" id="userName">                             
+
+            </span>             
+            <button class="btn btn-outline-light my-2 my-sm-0" onclick="signOut();">Sign Out</button>
+        </div>
+    </nav>
+
+    <div class="container" id="major">
+        <div class="row">
+            <img class="mx-auto d-block" src="logo-01.png" height="250px" style="margin-top:75px;">
+            <div class="col-lg-12 d-flex justify-content-center" style="margin-bottom:25px;">
+                <h1 class="display-4" style="text-align:center;">The Intelligent Donor</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck mb-3">
+                    <div class="card border-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Turn on Notifications</h5>
+                            <p class="card-text">In order to receive notifications when your help is needed, please grant the app permission to send notifications! 
+                                We garuntee that you will be only notified when needed!
+                            </p>
+                            <a href="#" class="btn btn-outline-info" role="button" onclick="enableNotif()">Turn on Notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Fill your Personal Data</h5>
+                            <p class="card-text">In order to be able to notify you of possible avenues of blood donation, we need your
+                                personal information.</p>
+                            <p class="card-text">In order to opt in, please click on the button below to fill your information:</p>
+                            <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Request for Blood</h5>
+                            <p class="card-text">Are you organising a blood donation campaign? Do you need blood of some kind?</p>
+                            <p class="card-text">Click on the button below to notify users in the vicinity!</p>
+                            <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck mt-3">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">About Us</h5>
+                            <p class="card-text">Want to know more about us and what we do? Follow the link below!</p>
+                            <a href="about.html" class="btn btn-outline-light" role="button">About The Intelligent Donor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck mt-3">
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Donate for a Cause</h5>
+                            <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
+                            <a href="#" class="btn btn-outline-success" role="button">Donate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" hidden="false">
+        <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+    </div>
+    <div class="mb-5">
+
+    </div>
+</body>
+</html>

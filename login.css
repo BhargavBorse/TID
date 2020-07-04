@@ -1,0 +1,20 @@
+html,body{
+    height: 100%;
+    margin: 0px !important;
+}
+body {
+  /* background-image: url(//www.toptal.com/designers/subtlepatterns/patterns/symphony.png); */
+  background-image: url('bg.png');
+  background-position: bottom;
+  animation: 4s linear 0s infinite bp;
+}
+
+@keyframes bp {
+  from {
+    background-position:  200px 0;
+  }
+  
+  to {
+    background-position:  0 199px;
+  }
+}
