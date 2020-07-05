@@ -221,32 +221,27 @@
 
     </div>
     <!--FireBase integration-->
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
 
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-storage.js"></script>
-
-    <!-- Comment out (or don't include) services that you don't want to use -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-functions.js"></script> -->
-
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDUxHo9ItDrKydYpKNDnRPVcpyFxfyOwmM",
-            authDomain: "blooddonation-93ff8.firebaseapp.com",
-            databaseURL: "https://blooddonation-93ff8.firebaseio.com",
-            projectId: "blooddonation-93ff8",
-            storageBucket: "blooddonation-93ff8.appspot.com",
-            messagingSenderId: "775166540107"
-        };
-        firebase.initializeApp(config);
-    </script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
+                authDomain: "the-intelligent-donor.firebaseapp.com",
+                databaseURL: "https://the-intelligent-donor.firebaseio.com",
+                projectId: "the-intelligent-donor",
+                storageBucket: "the-intelligent-donor.appspot.com",
+                messagingSenderId: "1031674462132",
+                appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
+                measurementId: "G-TFH9CVXTDG"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
 
     <!--Custom JS-->
     <script src="checklogstatus.js"></script>
