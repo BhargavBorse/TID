@@ -24,3 +24,15 @@ html {
   margin-top: 70px;
   margin-bottom: 50px;
 }
+
+.megamenu-li {
+	position: static;
+}
+
+.megamenu {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 15px;
+}

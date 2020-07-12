@@ -4,7 +4,7 @@ html,body{
 }
 body {
   /* background-image: url(//www.toptal.com/designers/subtlepatterns/patterns/symphony.png); */
-  background-image: url('bg.png');
+  background-image: url('../image/bg.png');
   background-position: bottom;
   animation: 4s linear 0s infinite bp;
 }
