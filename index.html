@@ -26,7 +26,7 @@
 
 <body>    
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav">
-        <a class="navbar-brand" href="index.html">  The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <a class="navbar-brand" href="index.html"> The Intelligent Donor <span class="sr-only">(current)</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -104,7 +104,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <span class="dropdown-item">Logged In as:</span><span class="dropdown-item mr-1" id="userName">
                         
-                    </span> <hr>
+                    </span><hr>
                     <a class="dropdown-item" href="#">Update Personal Information</a>
                     <a class="dropdown-item" href="#">Manage Existing Appointment</a>
                     <a class="dropdown-item" href="#">Donation History</a> <hr>
@@ -114,7 +114,6 @@
         </ul>
     </div>
 </nav>
-
 <div class="container" id="major">
     <div class="row">
         <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;">
@@ -122,21 +121,6 @@
             <h1 class="display-4" style="text-align:center;">The Intelligent Donor</h1>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck mb-3">
-                <div class="card border-info">
-                    <div class="card-body">
-                        <h5 class="card-title">Turn on Notifications</h5>
-                        <p class="card-text">In order to receive notifications when your help is needed, please grant the app permission to send notifications! 
-                            We garuntee that you will be only notified when needed!
-                        </p>
-                        <a href="#" class="btn btn-outline-info" role="button" onclick="enableNotif()">Turn on Notifications</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="row">
         <div class="col-lg-12">
             <div class="card-deck mb-3">
@@ -149,12 +133,6 @@
                         <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck mb-3">
                 <div class="card border-info">
                     <div class="card-body">
                         <h5 class="card-title">Never Donated Blood Before?</h5>
@@ -170,181 +148,190 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card-deck">
-                <div class="card">
+                <div class="card border-danger">
                     <div class="card-body">
                         <h5 class="card-title">Fill your Personal Data</h5>
-                        <p class="card-text">In order to be able to notify you of possible avenues of blood donation, we need your
-                            personal information.</p>
-                            <p class="card-text">In order to opt in, please click on the button below to fill your information:</p>
-                            <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Request for Blood</h5>
-                            <p class="card-text">Are you organising a blood donation campaign? Do you need blood of some kind?</p>
-                            <p class="card-text">Click on the button below to notify users in the vicinity!</p>
-                            <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a>
-                        </div>
+                        <p class="card-text">
+                            In order to be able to notify you of possible avenues of blood donation, we need your
+                            personal information.
+                        </p>
+                        <p class="card-text">In order to opt in, please click on the button below to fill your information:</p>
+                        <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card-deck mt-3">
-                    <div class="card bg-danger text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">About Us</h5>
-                            <p class="card-text">Want to know more about us and what we do? Follow the link below!</p>
-                            <a href="about.html" class="btn btn-outline-light" role="button">About The Intelligent Donor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card-deck mt-3">
-                    <div class="card border-success">
-                        <div class="card-body">
-                            <h5 class="card-title">Donate for a Cause</h5>
-                            <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
-                            <a href="#" class="btn btn-outline-success" role="button">Donate</a>
-                        </div>
+                <div class="card border-danger">
+                    <div class="card-body">
+                        <h5 class="card-title">Request for Blood</h5>
+                        <p class="card-text">Are you organising a blood donation campaign? Do you need blood of some kind?</p>
+                        <p class="card-text">Click on the button below to notify users in the vicinity!</p>
+                        <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="loader" hidden="false">
-        <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-deck mt-3">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">About Us</h5>
+                        <p class="card-text">Want to know more about us and what we do? Follow the link below!</p>
+                        <a href="about.html" class="btn btn-outline-light" role="button">About The Intelligent Donor</a>
+                    </div>
+                </div>
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Donate for a Cause</h5>
+                        <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
+                        <a href="#" class="btn btn-outline-light" role="button">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-5">
-        
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-deck mt-3">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Donate for a Cause</h5>
+                        <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
+                        <a href="#" class="btn btn-outline-success" role="button">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+</div>
+<div id="loader" hidden="false">
+    <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+</div>
+<div class="mb-5">
     
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
-            authDomain: "the-intelligent-donor.firebaseapp.com",
-            databaseURL: "https://the-intelligent-donor.firebaseio.com",
-            projectId: "the-intelligent-donor",
-            storageBucket: "the-intelligent-donor.appspot.com",
-            messagingSenderId: "1031674462132",
-            appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
-            measurementId: "G-TFH9CVXTDG"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    
-    <!--Custom JS-->
-    <script src="assets/js_files/checklogstatus.js"></script>
-    <script src="assets/js_files/signout.js"></script>
-    <script src="assets/js_files/firestorer.js"></script>
-    <script>
-        const messaging = firebase.messaging();
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('sw.js').then(function (registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    messaging.usePublicVapidKey('BHPTKEIIdV19XinKjR_699PAkWNstMd8OO8vhtjL4nMmlPzDH8hXTiDhBgHpNopKfTbGh9UHYfgHP5Kw6JcA1CM');
-                    messaging.requestPermission().then(function () {
-                        console.log('Notification permission granted.');
-                        // TODO(developer): Retrieve an Instance ID token for use with FCM.
-                        // ...
-                        
-                        // Get Instance ID token. Initially this makes a network call, once retrieved
-                        // subsequent calls to getToken will return from cache.
-                        messaging.getToken().then(function (currentToken) {
-                            if (currentToken) {
-                                console.log(currentToken);
-                                var tok = {
-                                    u_nid: currentToken
-                                }
-                                db.collection("notifID").doc(uid).set(tok).then(function () {
-                                    console.log("Document successfully written!");
-                                }).catch(function (error) {
-                                    console.error("Error writing document: ", error);
-                                });
-                            } else {
-                                // Show permission request.
-                                console.log('No Instance ID token available. Request permission to generate one.');
-                                // Show permission UI.
-                                
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
+        authDomain: "the-intelligent-donor.firebaseapp.com",
+        databaseURL: "https://the-intelligent-donor.firebaseio.com",
+        projectId: "the-intelligent-donor",
+        storageBucket: "the-intelligent-donor.appspot.com",
+        messagingSenderId: "1031674462132",
+        appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
+        measurementId: "G-TFH9CVXTDG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<!--Custom JS-->
+<script src="assets/js_files/checklogstatus.js"></script>
+<script src="assets/js_files/signout.js"></script>
+<script src="assets/js_files/firestorer.js"></script>
+<script>
+    const messaging = firebase.messaging();
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('sw.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                messaging.usePublicVapidKey('BHPTKEIIdV19XinKjR_699PAkWNstMd8OO8vhtjL4nMmlPzDH8hXTiDhBgHpNopKfTbGh9UHYfgHP5Kw6JcA1CM');
+                messaging.requestPermission().then(function () {
+                    console.log('Notification permission granted.');
+                    // TODO(developer): Retrieve an Instance ID token for use with FCM.
+                    // ...
+                    
+                    // Get Instance ID token. Initially this makes a network call, once retrieved
+                    // subsequent calls to getToken will return from cache.
+                    messaging.getToken().then(function (currentToken) {
+                        if (currentToken) {
+                            console.log(currentToken);
+                            var tok = {
+                                u_nid: currentToken
                             }
-                        }).catch(function (err) {
-                            console.log('An error occurred while retrieving token. ', err);
-                        });
+                            db.collection("notifID").doc(uid).set(tok).then(function () {
+                                console.log("Document successfully written!");
+                            }).catch(function (error) {
+                                console.error("Error writing document: ", error);
+                            });
+                        } else {
+                            // Show permission request.
+                            console.log('No Instance ID token available. Request permission to generate one.');
+                            // Show permission UI.
+                            
+                        }
                     }).catch(function (err) {
-                        console.log('Unable to get permission to notify.', err);
+                        console.log('An error occurred while retrieving token. ', err);
                     });
-                }, function (err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
+                }).catch(function (err) {
+                    console.log('Unable to get permission to notify.', err);
                 });
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
             });
+        });
+    }
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI notify the user they can add to home screen
+    });
+    window.addEventListener('appinstalled', (evt) => {
+        app.logEvent('a2hs', 'installed');
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log('display-mode is standalone');
         }
-        let deferredPrompt;
-        
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent Chrome 67 and earlier from automatically showing the prompt
-            e.preventDefault();
-            // Stash the event so it can be triggered later.
-            deferredPrompt = e;
-            // Update UI notify the user they can add to home screen
-        });
-        window.addEventListener('appinstalled', (evt) => {
-            app.logEvent('a2hs', 'installed');
-            if (window.matchMedia('(display-mode: standalone)').matches) {
-                console.log('display-mode is standalone');
-            }
-        });
-        
-        
-        // Callback fired if Instance ID token is updated.
-        messaging.onTokenRefresh(function () {
-            messaging.getToken().then(function (refreshedToken) {
-                console.log('Token refreshed.');
-                // Indicate that the new Instance ID token has not yet been sent to the
-                // app server.
-                db.collection("notifID").doc(uid).set(refreshedToken).then(function () {
-                    console.log("Document successfully written!");
-                }).catch(function (error) {
-                    console.error("Error writing document: ", error);
-                });
-                // Send Instance ID token to app server.
-                
-                // ...
-            }).catch(function (err) {
-                console.log('Unable to retrieve refreshed token ', err);
+    });
+    
+    
+    // Callback fired if Instance ID token is updated.
+    messaging.onTokenRefresh(function () {
+        messaging.getToken().then(function (refreshedToken) {
+            console.log('Token refreshed.');
+            // Indicate that the new Instance ID token has not yet been sent to the
+            // app server.
+            db.collection("notifID").doc(uid).set(refreshedToken).then(function () {
+                console.log("Document successfully written!");
+            }).catch(function (error) {
+                console.error("Error writing document: ", error);
             });
-        });
-        // Handle incoming messages. Called when:
-        // - a message is received while the app has focus
-        // - the user clicks on an app notification created by a service worker
-        //   `messaging.setBackgroundMessageHandler` handler.
-        messaging.onMessage(function (payload) {
-            console.log('Message received. ', payload);
+            // Send Instance ID token to app server.
+            
             // ...
+        }).catch(function (err) {
+            console.log('Unable to retrieve refreshed token ', err);
         });
-    </script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    });
+    // Handle incoming messages. Called when:
+    // - a message is received while the app has focus
+    // - the user clicks on an app notification created by a service worker
+    //   `messaging.setBackgroundMessageHandler` handler.
+    messaging.onMessage(function (payload) {
+        console.log('Message received. ', payload);
+        // ...
+    });
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
 </body>
 
 </html>
