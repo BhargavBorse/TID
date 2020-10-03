@@ -26,7 +26,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav">
-        <a class="navbar-brand" href="index.html">  The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <a class="navbar-brand" href="main.html"> The Intelligent Donor <span class="sr-only">(current)</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,68 +34,23 @@
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Donate Blood</a>
-                <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Manage my Donation</h5>
-                            <a class="dropdown-item" href="#">Schedule an Appointment</a>
-                            <a class="dropdown-item" href="#">Manage Existing Appointment</a>
-                            <a class="dropdown-item" href="#">View my Donation</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>How to Donate</h5>
-                            <a class="dropdown-item" href="#">Find a Blood Drive</a>
-                            <a class="dropdown-item" href="#">Eligibility Requirement</a>
-                            <a class="dropdown-item" href="#">Types of Blood Donation</a>
-                            <a class="dropdown-item" href="#">Learn about Blood</a>
-                            <a class="dropdown-item" href="#">How Blood Donation Helps</a>
-                            <a class="dropdown-item" href="#">Common Concerns</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Corona(COVID-19) Information</h5>
-                            <a class="dropdown-item" href="#">COVID-19 and Blood Donation</a>
-                            <a class="dropdown-item" href="#">COVID-19 Convalescent Plasma <br> Donation</a>
-                        </div>
-                    </div>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="pinfo.html">Donate Blood</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="find.html">Find Blood</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Blood Donation Process
+                    Request Blood
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Donation Process Overview</a>
-                    <a class="dropdown-item" href="#">What to do before, during and after</a>
-                    <a class="dropdown-item" href="#">What happens to Donated Blood</a>
-                    <a class="dropdown-item" href="#">First time Blood Donor</a>
-                    <a class="dropdown-item" href="#">Iron and Blood Donation</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Host a Blood Drive</a>
-                <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Manage my Blood Drive</h5>
-                            <a class="dropdown-item" href="#">Apply to Host a Blood Drive</a>
-                            <a class="dropdown-item" href="#">Manage Existing Blood Drive</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Learn about Hosting</h5>
-                            <a class="dropdown-item" href="#">Why Host a Blood Drive</a>
-                            <a class="dropdown-item" href="#">How Hosting a Blood Drive Works</a>
-                            <a class="dropdown-item" href="#">Hosting a Blood Drive FAQ</a>
-                        </div>
-                    </div>
+                    <a class="dropdown-item" href="req-rcvd.html">Blood request received</a>
+                    <a class="dropdown-item" href="req-sent.html">Blood request sent</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,10 +59,10 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <span class="dropdown-item">Logged In as:</span><span class="dropdown-item mr-1" id="userName">
                         
-                    </span> <hr>
-                    <a class="dropdown-item" href="#">Update Personal Information</a>
-                    <a class="dropdown-item" href="#">Manage Existing Appointment</a>
-                    <a class="dropdown-item" href="#">Donation History</a> <hr>
+                    </span><hr>
+                    <a class="dropdown-item" href="update-pinfo.html">Update Personal Information</a>
+                    <a class="dropdown-item" href="manage-appt.html">Manage Existing Appointment</a>
+                    <a class="dropdown-item" href="donate-history.html">Donation History</a> <hr>
                     <center> <button class="btn btn-outline-danger my-2 my-sm-0" onclick="signOut();">Sign Out</button> </center>
                 </div>
             </li>

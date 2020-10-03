@@ -26,7 +26,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav">
-        <a class="navbar-brand" href="index.html">  The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <a class="navbar-brand" href="main.html">  The Intelligent Donor <span class="sr-only">(current)</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,68 +34,23 @@
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Donate Blood</a>
-                <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Manage my Donation</h5>
-                            <a class="dropdown-item" href="#">Schedule an Appointment</a>
-                            <a class="dropdown-item" href="#">Manage Existing Appointment</a>
-                            <a class="dropdown-item" href="#">View my Donation</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>How to Donate</h5>
-                            <a class="dropdown-item" href="#">Find a Blood Drive</a>
-                            <a class="dropdown-item" href="#">Eligibility Requirement</a>
-                            <a class="dropdown-item" href="#">Types of Blood Donation</a>
-                            <a class="dropdown-item" href="#">Learn about Blood</a>
-                            <a class="dropdown-item" href="#">How Blood Donation Helps</a>
-                            <a class="dropdown-item" href="#">Common Concerns</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Corona(COVID-19) Information</h5>
-                            <a class="dropdown-item" href="#">COVID-19 and Blood Donation</a>
-                            <a class="dropdown-item" href="#">COVID-19 Convalescent Plasma <br> Donation</a>
-                        </div>
-                    </div>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="pinfo.html">Donate Blood</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="find.html">Find Blood</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Blood Donation Process
+                    Request Blood
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Donation Process Overview</a>
-                    <a class="dropdown-item" href="#">What to do before, during and after</a>
-                    <a class="dropdown-item" href="#">What happens to Donated Blood</a>
-                    <a class="dropdown-item" href="#">First time Blood Donor</a>
-                    <a class="dropdown-item" href="#">Iron and Blood Donation</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown megamenu-li">
-                <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Host a Blood Drive</a>
-                <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Manage my Blood Drive</h5>
-                            <a class="dropdown-item" href="#">Apply to Host a Blood Drive</a>
-                            <a class="dropdown-item" href="#">Manage Existing Blood Drive</a>
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <h5>Learn about Hosting</h5>
-                            <a class="dropdown-item" href="#">Why Host a Blood Drive</a>
-                            <a class="dropdown-item" href="#">How Hosting a Blood Drive Works</a>
-                            <a class="dropdown-item" href="#">Hosting a Blood Drive FAQ</a>
-                        </div>
-                    </div>
+                    <a class="dropdown-item" href="req-rcvd.html">Blood request received</a>
+                    <a class="dropdown-item" href="req-sent.html">Blood request sent</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,10 +59,10 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <span class="dropdown-item">Logged In as:</span><span class="dropdown-item mr-1" id="userName">
                         
-                    </span> <hr>
-                    <a class="dropdown-item" href="#">Update Personal Information</a>
-                    <a class="dropdown-item" href="#">Manage Existing Appointment</a>
-                    <a class="dropdown-item" href="#">Donation History</a> <hr>
+                    </span><hr>
+                    <a class="dropdown-item" href="update-pinfo.html">Update Personal Information</a>
+                    <a class="dropdown-item" href="manage-appt.html">Manage Existing Appointment</a>
+                    <a class="dropdown-item" href="donate-history.html">Donation History</a> <hr>
                     <center> <button class="btn btn-outline-danger my-2 my-sm-0" onclick="signOut();">Sign Out</button> </center>
                 </div>
             </li>
@@ -127,87 +82,31 @@
                         <p class="card-text">
                             <form onreset="formReset()" id="detsForm">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail">Name</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
                                         <label for="inputEmail">Email</label>
                                         <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label for="inputPhNumber">Phone Number</label>
                                         <input type="text" class="form-control" id="inputPhNumber" placeholder="Phone Number" required>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <button onclick="getLocation()">Calc Location</button>
-                                </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputLatitude">Latitude</label>
-                                        <input type="text" class="form-control" id="inputLatitude" placeholder="Latitude" required disabled>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputLongitude">Longitude</label>
-                                        <input type="text" class="form-control" id="inputLongitude" placeholder="Longitude" required disabled>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputAddress2">Address 2</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="City Area" required>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputCity">City</label>
-                                        <input type="text" class="form-control" id="inputCity" required>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputState">State</label>
-                                        <select id="inputState" class="form-control" required>
-                                            <option value="AndhraPradesh">Andhra Pradesh</option>
-                                            <option value="ArunachalPradesh">Arunachal Pradesh</option>
-                                            <option value="Assam">Assam</option>
-                                            <option value="Bihar">Bihar</option>
-                                            <option value="Chhattisgarh">Chhattisgarh</option>
-                                            <option value="Goa">Goa</option>
-                                            <option value="Gujarat">Gujarat</option>
-                                            <option value="Haryana">Haryana</option>
-                                            <option value="HimachalPradesh">Himachal Pradesh</option>
-                                            <option value="JammuAndKashmir">Jammu and Kashmir</option>
-                                            <option value="Jharkhand">Jharkhand</option>
-                                            <option value="Karnataka">Karnataka</option>
-                                            <option value="Kerala">Kerala</option>
-                                            <option value="MadhyaPradesh">Madhya Pradesh</option>
-                                            <option value="Maharashtra">Maharashtra</option>
-                                            <option value="Manipur">Manipur</option>
-                                            <option value="Meghalaya">Meghalaya</option>
-                                            <option value="Mizoram">Mizoram</option>
-                                            <option value="Nagaland">Nagaland</option>
-                                            <option value="Odisha">Odisha</option>
-                                            <option value="Punjab">Punjab</option>
-                                            <option value="Rajasthan">Rajasthan</option>
-                                            <option value="Sikkim">Sikkim</option>
-                                            <option value="TamilNadu">Tamil Nadu</option>
-                                            <option value="Telangana">Telangana</option>
-                                            <option value="Tripura">Tripura</option>
-                                            <option value="UttarPradesh">Uttar Pradesh</option>
-                                            <option value="Uttarakhand">Uttarakhand</option>
-                                            <option value="WestBengal">West Bengal</option>
-                                            <option value="Andaman">Andaman and Nicobar Islands</option>
-                                            <option value="Chandigarh">Chandigarh</option>
-                                            <option value="Dadar">Dadar and Nagar Haveli</option>
-                                            <option value="Daman">Daman and Diu</option>
-                                            <option value="Delhi">Delhi</option>
-                                            <option value="Lakshadweep">Lakshadweep</option>
-                                            <option value="Puducherry">Puducherry</option>
-                                        </select>
+                                    <div class="form-group col-md-10">
+                                        <label for="inputAddress">Address</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <label for="inputZip">Zip</label>
-                                        <input type="text" class="form-control" id="inputZip" required>
+                                        <label for="inputEmail">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip" placeholder="Zip" required>
                                     </div>
                                 </div>
+                                
+                                
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputBloodGroup">Blood Group</label>
@@ -310,7 +209,7 @@
     <!--Custom JS-->
     <script src="assets/js_files/checklogstatus.js"></script>
     <script src="assets/js_files/signout.js"></script>
-    <script src="assets/js_files/firestorer.js"></script>
+    <!-- <script src="assets/js_files/firestorer.js"></script> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

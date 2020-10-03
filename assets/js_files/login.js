@@ -1,7 +1,7 @@
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
-        window.location.replace('index.html');
+        window.location.replace('main.html');
         // ...
     } else {
         // User is signed out.
@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'index.html',
+            signInSuccessUrl: 'main.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
