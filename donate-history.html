@@ -71,9 +71,9 @@
 </nav>
 <div class="container" id="major">
     <div class="row">
-        <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;">
-        <div class="col-lg-12 d-flex justify-content-center" style="margin-bottom:25px;">
-            <h1 class="display-4" style="text-align:center;">The Intelligent Donor</h1>
+        <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
+        <div class="col-lg-12 d-flex justify-content-center" style="margin-top:45px; margin-bottom:45px; ">
+            <h1 class="display-4" style="text-align:center;">Donation History</h1>
         </div>
     </div>
     <div class="row">
@@ -97,62 +97,13 @@
                         <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck">
-                <div class="card border-danger">
+                <div class="card border-info">
                     <div class="card-body">
-                        <h5 class="card-title">Fill your Personal Data</h5>
-                        <p class="card-text">
-                            In order to be able to notify you of possible avenues of blood donation, we need your
-                            personal information.
+                        <h5 class="card-title">Never Donated Blood Before?</h5>
+                        <p class="card-text">Blood donations can help save people's lives. Learn how blood donations help, what to expect, and how to get ready for your first blood donation.
                         </p>
-                        <p class="card-text">In order to opt in, please click on the button below to fill your information:</p>
-                        <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a>
-                    </div>
-                </div>
-                <div class="card border-danger">
-                    <div class="card-body">
-                        <h5 class="card-title">Request for Blood</h5>
-                        <p class="card-text">Are you organising a blood donation campaign? Do you need blood of some kind?</p>
-                        <p class="card-text">Click on the button below to notify users in the vicinity!</p>
-                        <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck mt-3">
-                <div class="card bg-danger text-white">
-                    <div class="card-body">
-                        <h5 class="card-title">About Us</h5>
-                        <p class="card-text">Want to know more about us and what we do? Follow the link below!</p>
-                        <a href="about.html" class="btn btn-outline-light" role="button">About The Intelligent Donor</a>
-                    </div>
-                </div>
-                <div class="card bg-success text-white">
-                    <div class="card-body">
-                        <h5 class="card-title">Donate for a Cause</h5>
-                        <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
-                        <a href="#" class="btn btn-outline-light" role="button">Donate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck mt-3">
-                <div class="card border-success">
-                    <div class="card-body">
-                        <h5 class="card-title">Donate for a Cause</h5>
-                        <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
-                        <a href="#" class="btn btn-outline-success" role="button">Donate</a>
+                        <!-- <a href="#" class="btn btn-outline-info" role="button" onclick="enableNotif()">Turn on Notifications</a> -->
+                        <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -191,7 +142,7 @@
 <!-- <script src="assets/js_files/checklogstatus.js"></script> -->
 <script src="assets/js_files/signout.js"></script>
 <script src="assets/js_files/firestorer.js"></script>
-<script src="assets/js_files/main.js"></script>
+<script src="assets/js_files/donate-history.js"></script>
 <script>
     const messaging = firebase.messaging();
     if ('serviceWorker' in navigator) {

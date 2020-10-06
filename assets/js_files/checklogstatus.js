@@ -28,10 +28,10 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-
+        
         database.child(user.uid).child('user_details').on('value',function(user_details_snapshot){
             var user_details = user_details_snapshot.val();
-
+            
             document.getElementById('inputName').value = user_details.name;
             document.getElementById('inputEmail').value = user_details.email;
             document.getElementById('inputPhNumber').value = user_details.phone_no;
@@ -43,8 +43,9 @@ firebase.auth().onAuthStateChanged(function (user) {
             document.getElementById('inputConditionsDate').value = user_details.conditions_date;
             document.getElementById('inputDiseases').value = user_details.disease;
             document.getElementById('inputDiseasesDate').value = user_details.disease_date;
-        });
 
+            
+        });
         document.getElementById('subBtn').onclick = function(){
             if (document.getElementById('detsForm')!=null)
             {
@@ -73,8 +74,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                     disease: disease,
                     disease_date: disease_date
                 });
-                alert('Details Successfully Updated');
-                location.reload();
+                // alert('Details Successfully Updated');
+                window.location.replace('appointment.html');
                 // var docRef = db.collection("pdets").doc(uid);
                 // docRef.get().then(function (doc) {
                 //     if (doc.exists) {
@@ -112,9 +113,14 @@ firebase.auth().onAuthStateChanged(function (user) {
             }
         }
     }
+    
     else {
         // User is signed out.
         // ...
         window.location.replace('index.html');
     }
 });
+
+document.getElementById('back-main').onclick = function(){
+    window.location.replace('main.html');
+};
