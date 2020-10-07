@@ -41,17 +41,17 @@
                 <a class="nav-link" href="find.html">Find Blood</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Request Blood
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="req-rcvd.html">Blood request received</a>
-                    <a class="dropdown-item" href="req-sent.html">Blood request sent</a>
+                    <a class="dropdown-item" href="req-sent.html"><u>Blood request sent</u></a>
                     <a class="dropdown-item" href="accepted_req.html">Accepted Request</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="feedback.html">Feedback</a>
+                <a class="nav-link" href="feedback.html">Feedback</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,50 +72,73 @@
 </nav>
 <div class="container" id="major">
     <div class="row">
+        <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
+        <div class="col-lg-12 d-flex justify-content-center" style="margin-top:25px;">
+            <h1 class="display-4" style="text-align:center;">Contact details of donor</h1>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-lg-12">
             <div class="card border-info" style="margin-top:75px;">
                 <div class="card-body ">
-                    <h5 class="card-title">Feedback Form</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">We all need people who will give us feedback. That’s how we improve.</h6>
-                    
                     <p class="card-text">
+                    <h6 class="card-subtitle mb-2 text-muted">Phone number, Email address and Address will be visible after the donor accepts your request.</h6>
                         <form class="myForm" onreset="formReset()" id="detsForm">
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="inputName">Name</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Name" readonly>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEmail">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="************" readonly>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputPhNumber">Phone Number</label>
-                                    <input type="text" class="form-control" id="inputPhNumber" placeholder="Phone Number" required>
+                                    <input type="text" class="form-control" id="inputPhNumber" placeholder="************" readonly>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="Subject">Subject</label>
-                                    <select id="inputSubject" class="form-control" required>
-                                        <option value="">--Select--</option>
-                                        <option value="Regarding Hospital">Regarding Hospital</option>
-                                        <option value="Web Site/Web App">Web Site/Web App</option>
-                                        <option value="Web Site/Web App">Additional Suggestion</option>
-                                        <option value="Web Site/Web App">Other</option>
-                                    </select>
+                                <div class="form-group col-md-4">
+                                    <label for="inputName">Blood Group</label>
+                                    <input type="text" class="form-control" id="inputBloodGroup" placeholder="Blood Group" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="************" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPhNumber">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" placeholder="************" readonly>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="Message">Message</label>
-                                    <textarea name="message" id="message" class="form-control">
-                                        
-                                    </textarea>
+                                <div class="form-group col-md-4">
+                                    <label for="inputName">Gender</label>
+                                    <input type="text" class="form-control" id="inputGender" placeholder="Gender" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail">Do donor fall under any of the conditions or within period of deferment of them?</label>
+                                    <input type="text" class="form-control" id="inputConditions" placeholder="-" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPhNumber">An approximate date of when donor underwent the selected condition</label>
+                                    <input type="text" class="form-control" id="inputConditionsDate" placeholder="-" readonly>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-danger mr-2" id="subBtn">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Reset</button>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputName">Is donor suffering from any of the diseases</label>
+                                    <input type="text" class="form-control" id="inputDiseases" placeholder="-" readonly>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail">An approximate date of when donor underwent the selected disease</label>
+                                    <input type="text" class="form-control" id="inputDiseasesDate" placeholder="-" readonly>
+                                </div>
+                            </div>
+                            <!-- <button type="button" class="btn btn-danger mr-2" id="reqBtn">Send Request</button> -->
+                            <button type="button" class="btn btn-danger mr-2" id="delBtn">Delete Request</button>
+                            <button type="button" class="btn btn-danger mr-2" id="homeBtn">Home</button>
                         </form>
                     </p>
                 </div>
@@ -153,7 +176,7 @@
 </script>
 
 <!--Custom JS-->
-<script src="assets/js_files/feedback.js"></script>
+<script src="assets/js_files/contact_donor.js"></script>
 <script src="assets/js_files/signout.js"></script>
 <!-- <script src="assets/js_files/firestorer.js"></script> -->
 

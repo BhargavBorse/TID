@@ -1,5 +1,6 @@
 var uid;
 var database = firebase.database().ref('users');
+
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         document.getElementById('major').hidden = false;
@@ -43,7 +44,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             document.getElementById('inputConditionsDate').value = user_details.conditions_date;
             document.getElementById('inputDiseases').value = user_details.disease;
             document.getElementById('inputDiseasesDate').value = user_details.disease_date;
-
+            
             
         });
         document.getElementById('subBtn').onclick = function(){

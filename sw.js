@@ -1,52 +1,72 @@
-var CACHE_NAME = 'tid-cache-v1';
-var urlsToCache = [
+self.addEventListener('install', event => {
+    console.log('Service worker installing...');
+    // Add a call to skipWaiting here
+  });
+  self.skipWaiting();
+  self.addEventListener('activate', event => {
+    console.log('Service worker activating...');
+  });
+  self.addEventListener('fetch', event => {
+    console.log('Fetching:', event.request.url);
+  });
+  
+  // fetching part
+  // const filesToCache = [
+  //   '/',
+  //   'login.html',
+  //   'index.html',
+  //   'reminder.html',
+  //   'event.html',
+  //   'saved-images.html',
+  //   'assets/css/main.css',
+  //   'assets/css/material-kit.css',
+  //   'assets/css/material-kit-min.css',
+  //   'assets/css/prof_pic_upload.css',
+  //   'assets/css/util.css',
+  //   'assets/img/backlit-clouds-dusk-853168 - Copy.jpg',
+  //   'assets/img/backlit-clouds-dusk-853168.jpg',
+  //   'assets/img/favicon.jpg',
+  //   'assets/js/material-kit.js',
+  //   'assets/js/material-kit-min.js',
+  //   'assets/js/prof_pic_upload.js',
+  //   'lightbox/src/css/lightbox.css',
+  //   'lightbox/src/js/lightbox.js',
+  //   'lightbox/src/images/close.png',
+  //   'lightbox/src/images/next.png',
+  //   'lightbox/src/images/prev.png',
+  //   'lightbox/src/images/loading.gif'
     
-];
-self.addEventListener('install', function (event) {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(function (cache) {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache);
-            })
-    );
-});
-self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request)
-            .then(function (response) {
-                // Cache hit - return response
-                if (response) {
-                    return response;
-                }
-
-                // IMPORTANT: Clone the request. A request is a stream and
-                // can only be consumed once. Since we are consuming this
-                // once by cache and once by the browser for fetch, we need
-                // to clone the response.
-                var fetchRequest = event.request.clone();
-
-                return fetch(fetchRequest).then(
-                    function (response) {
-                        // Check if we received a valid response
-                        if (!response || response.status !== 200 || response.type !== 'basic') {
-                            return response;
-                        }
-
-                        // IMPORTANT: Clone the response. A response is a stream
-                        // and because we want the browser to consume the response
-                        // as well as the cache consuming the response, we need
-                        // to clone it so we have two streams.
-                        var responseToCache = response.clone();
-
-                        caches.open(CACHE_NAME)
-                            .then(function (cache) {
-                                cache.put(event.request, responseToCache);
-                            });
-
-                        return response;
-                    }
-                );
-            })
-    );
-});
+  // ];
+  
+  // const staticCacheName = 'pages-cache-v1';
+  
+  // self.addEventListener('install', event => {
+  //   console.log('Attempting to install service worker and cache static assets');
+  //   event.waitUntil(
+  //     caches.open(staticCacheName)
+  //     .then(cache => {
+  //       return cache.addAll(filesToCache);
+  //     })
+  //   );
+  // });
+  // self.addEventListener('fetch', event => {
+  //   console.log('Fetch event for ', event.request.url);
+  //   event.respondWith(
+  //     caches.match(event.request)
+  //     .then(response => {
+  //       if (response) {
+  //         console.log('Found ', event.request.url, ' in cache');
+  //         return response;
+  //       }
+  //       console.log('Network request for ', event.request.url);
+  //       return fetch(event.request)
+  
+  //       // TODO 4 - Add fetched files to the cache
+  
+  //     }).catch(error => {
+  
+  //       // TODO 6 - Respond with custom offline page
+  
+  //     })
+  //   );
+  // });  

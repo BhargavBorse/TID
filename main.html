@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#dc3545">
     <!-- manifest file -->
-    <link rel="manifest" href="manifest.json">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
@@ -22,6 +22,7 @@
     
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="assets/image/favicon.png" />
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>    
@@ -47,6 +48,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="req-rcvd.html">Blood request received</a>
                     <a class="dropdown-item" href="req-sent.html">Blood request sent</a>
+                    <a class="dropdown-item" href="accepted_req.html">Accepted Request</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -81,20 +83,28 @@
             <div class="card-deck mb-3">
                 <div class="card border-info">
                     <div class="card-body">
-                        <h5 class="card-title">Am i Eligible to Donate?</h5>
-                        <p class="card-text">Are you eligible for blood donation? Find out about the eligibility requirements to donate blood today. Learn about general health, travel, medications, tattoos, and more.
+                        <h5 class="card-title">Is it safe to donate?</h5>
+                        <p class="card-text">Yes, donating blood is safe. You can’t get AIDS or any other infectious disease from giving blood because we always use new, sterile needles that are discarded after one use.
+                            You’ll even be given a mini-physical at your appointment, to ensure you are healthy enough to donate that day. We’ll check your temperature, blood pressure, pulse and hemoglobin.
                         </p>
                         <!-- <a href="#" class="btn btn-outline-info" role="button" onclick="enableNotif()">Turn on Notifications</a> -->
-                        <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a>
+                        <!-- <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a> -->
                     </div>
                 </div>
                 <div class="card border-info">
                     <div class="card-body">
-                        <h5 class="card-title">Never Donated Blood Before?</h5>
-                        <p class="card-text">Blood donations can help save people's lives. Learn how blood donations help, what to expect, and how to get ready for your first blood donation.
+                        <h5 class="card-title">I'm Not Sure I'm Eligible</h5>
+                        <p class="card-text">Approximately 38% of Americans are eligible to donate blood at any given time, so there’s a very good chance you meet the criteria.
+                            
+                            For most donations, these are the basic requirements: <br> <strong>Good Health:</strong>
+                            You generally feel well, even if you're being treated for a chronic condition.
+                            <br>
+                            <strong>Age 17:</strong>
+                            16 year olds may donate with parental permission in certain states if allowed by state law. <br>
+                            <strong>110 lbs:</strong>Additional weight requirements apply for donors age 18 or younger and all high school donors.
                         </p>
                         <!-- <a href="#" class="btn btn-outline-info" role="button" onclick="enableNotif()">Turn on Notifications</a> -->
-                        <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a>
+                        <!-- <a href="#" class="btn btn-outline-info" role="button" onclick="">Learn More</a> -->
                     </div>
                 </div>
             </div>
@@ -105,21 +115,20 @@
             <div class="card-deck">
                 <div class="card border-danger">
                     <div class="card-body">
-                        <h5 class="card-title">Fill your Personal Data</h5>
+                        <h5 class="card-title">I'm Afraid I'll Faint</h5>
                         <p class="card-text">
-                            In order to be able to notify you of possible avenues of blood donation, we need your
-                            personal information.
+                            Most donors feel fine after donating blood, but if you do feel faint or fatigued, simply lie down until you feel better. It might help you to think about this: you have about 10 pints of blood in your body. Roughly 1 pint is given during a donation. Your body can replenish that loss in a short time (a matter of hours for some components, a few weeks for others).
                         </p>
-                        <p class="card-text">In order to opt in, please click on the button below to fill your information:</p>
-                        <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a>
+                        <!-- <p class="card-text">In order to opt in, please click on the button below to fill your information:</p> -->
+                        <!-- <a href="pinfo.html" class="btn btn-outline-danger" role="button" id="pinfoBtn">Fill/Update Information</a> -->
                     </div>
                 </div>
                 <div class="card border-danger">
                     <div class="card-body">
-                        <h5 class="card-title">Request for Blood</h5>
-                        <p class="card-text">Are you organising a blood donation campaign? Do you need blood of some kind?</p>
-                        <p class="card-text">Click on the button below to notify users in the vicinity!</p>
-                        <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a>
+                        <h5 class="card-title">I Don't Like Needles</h5>
+                        <p class="card-text">You’re not alone: fear of needles certainly prevents some people from donating blood. But if you’re willing to spend a few minutes facing your fears (donating really can be that fast) you may find that the satisfaction you feel makes it worth it.</p>
+                        <!-- <p class="card-text">Click on the button below to notify users in the vicinity!</p> -->
+                        <!-- <a href="#" class="btn btn-outline-danger" role="button">Post Alert</a> -->
                     </div>
                 </div>
             </div>
@@ -130,29 +139,16 @@
             <div class="card-deck mt-3">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5 class="card-title">About Us</h5>
-                        <p class="card-text">Want to know more about us and what we do? Follow the link below!</p>
-                        <a href="about.html" class="btn btn-outline-light" role="button">About The Intelligent Donor</a>
+                        <h5 class="card-title">Find Blood</h5>
+                        <p class="card-text">If there’s requirement of blood the you can find your same blood type here.</p>
+                        <a href="find.html" class="btn btn-outline-light" role="button">Find Blood</a>
                     </div>
                 </div>
                 <div class="card bg-success text-white">
                     <div class="card-body">
                         <h5 class="card-title">Donate for a Cause</h5>
                         <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
-                        <a href="#" class="btn btn-outline-light" role="button">Donate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-deck mt-3">
-                <div class="card border-success">
-                    <div class="card-body">
-                        <h5 class="card-title">Donate for a Cause</h5>
-                        <p class="card-text">Help a charity achieve it's vision by doing your part, donate an amount of your choosing to Charity X</p>
-                        <a href="#" class="btn btn-outline-success" role="button">Donate</a>
+                        <a href="pinfo.html" class="btn btn-outline-light" role="button">Donate</a>
                     </div>
                 </div>
             </div>
@@ -193,92 +189,17 @@
 <script src="assets/js_files/firestorer.js"></script>
 <script src="assets/js_files/main.js"></script>
 <script>
-    const messaging = firebase.messaging();
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('sw.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                messaging.usePublicVapidKey('BHPTKEIIdV19XinKjR_699PAkWNstMd8OO8vhtjL4nMmlPzDH8hXTiDhBgHpNopKfTbGh9UHYfgHP5Kw6JcA1CM');
-                messaging.requestPermission().then(function () {
-                    console.log('Notification permission granted.');
-                    // TODO(developer): Retrieve an Instance ID token for use with FCM.
-                    // ...
-                    
-                    // Get Instance ID token. Initially this makes a network call, once retrieved
-                    // subsequent calls to getToken will return from cache.
-                    messaging.getToken().then(function (currentToken) {
-                        if (currentToken) {
-                            console.log(currentToken);
-                            var tok = {
-                                u_nid: currentToken
-                            }
-                            db.collection("notifID").doc(uid).set(tok).then(function () {
-                                console.log("Document successfully written!");
-                            }).catch(function (error) {
-                                console.error("Error writing document: ", error);
-                            });
-                        } else {
-                            // Show permission request.
-                            console.log('No Instance ID token available. Request permission to generate one.');
-                            // Show permission UI.
-                            
-                        }
-                    }).catch(function (err) {
-                        console.log('An error occurred while retrieving token. ', err);
-                    });
-                }).catch(function (err) {
-                    console.log('Unable to get permission to notify.', err);
-                });
-            }, function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js')
+            .then(registration => {
+                console.log('Service Worker is registered', registration);
+            })
+            .catch(err => {
+                console.error('Registration failed:', err);
             });
         });
     }
-    let deferredPrompt;
-    
-    window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent Chrome 67 and earlier from automatically showing the prompt
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e;
-        // Update UI notify the user they can add to home screen
-    });
-    window.addEventListener('appinstalled', (evt) => {
-        app.logEvent('a2hs', 'installed');
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-            console.log('display-mode is standalone');
-        }
-    });
-    
-    
-    // Callback fired if Instance ID token is updated.
-    messaging.onTokenRefresh(function () {
-        messaging.getToken().then(function (refreshedToken) {
-            console.log('Token refreshed.');
-            // Indicate that the new Instance ID token has not yet been sent to the
-            // app server.
-            db.collection("notifID").doc(uid).set(refreshedToken).then(function () {
-                console.log("Document successfully written!");
-            }).catch(function (error) {
-                console.error("Error writing document: ", error);
-            });
-            // Send Instance ID token to app server.
-            
-            // ...
-        }).catch(function (err) {
-            console.log('Unable to retrieve refreshed token ', err);
-        });
-    });
-    // Handle incoming messages. Called when:
-    // - a message is received while the app has focus
-    // - the user clicks on an app notification created by a service worker
-    //   `messaging.setBackgroundMessageHandler` handler.
-    messaging.onMessage(function (payload) {
-        console.log('Message received. ', payload);
-        // ...
-    });
 </script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

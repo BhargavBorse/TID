@@ -13,10 +13,15 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "index.html",
+    "start_url": "main.html",
     "background_color": "#ffffff",
-    "orientation": "portrait",
+    "orientation": "portrait-primary",
     "display": "standalone",
     "theme_color": "#dc3545",
-    "gcm_sender_id": "103953800507"
+    "gcm_sender_id": "103953800507",
+    "scope" : ".",
+    "description" : "Blood Donation Management System.",
+    "dir" : "ltr",
+    "lang" : "en-US",  
+    "gcm_sender_id_comment": "Do not change the GCM Sender ID"
 }

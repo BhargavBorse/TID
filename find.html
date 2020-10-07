@@ -47,6 +47,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="req-rcvd.html">Blood request received</a>
                     <a class="dropdown-item" href="req-sent.html">Blood request sent</a>
+                    <a class="dropdown-item" href="accepted_req.html">Accepted Request</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -91,16 +92,22 @@
                             <div class="form-group">
                                 <label for="inputBloodType">Select Blood Type</label>
                                 <select id="inputBloodType" class="form-control">
-                                    <option value="0" selected>None</option>
+                                    <option value="None">None</option>
                                     <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
                                     <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
                                 </select>
                                 
-                                <div class="" id="date_drp">
+                                <div class="" id="blood_drp">
                                     
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-danger mr-2" id="subBtn">Search</button>
+                            <button type="button" class="btn btn-danger mr-2" id="searchBtn">Search</button>
                             <button type="reset" class="btn btn-secondary">Reset</button>
                         </form>
                     </p>
@@ -110,58 +117,78 @@
         <div class="col-lg-12">
             <div class="card" style="margin-top:75px;">
                 <div class="card-body">
-                    <div id="select-dropdown" class="select-dropdown">
-                        
+                    <div class="col-md-12">
+                        <div class="table-responsive">          
+                            <table class="table table-hover" id="fetch_blood">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Blood Group</th>
+                                        <th>Condition</th>
+                                        <th>Condition Date</th>
+                                        <th>Disease</th>
+                                        <th>Disease Date</th>
+                                        <th></th>
+                                        <!-- <th>Deposit Paid</th>
+                                            <th>Total Price</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <!-- <button type="button" class="btn btn-danger mr-2" onclick="printBtn()" id="printBtn" style="visibility: hidden;">Print</button> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="loader" hidden="false">
-    <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
-</div>
-<div class="mb-5">
+    <div id="loader" hidden="false">
+        <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+    </div>
+    <div class="mb-5">
+        
+    </div>
+    <!--FireBase integration-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
     
-</div>
-<!--FireBase integration-->
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
-        authDomain: "the-intelligent-donor.firebaseapp.com",
-        databaseURL: "https://the-intelligent-donor.firebaseio.com",
-        projectId: "the-intelligent-donor",
-        storageBucket: "the-intelligent-donor.appspot.com",
-        messagingSenderId: "1031674462132",
-        appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
-        measurementId: "G-TFH9CVXTDG"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
-
-<!--Custom JS-->
-<script src="assets/js_files/find.js"></script>
-<script src="assets/js_files/signout.js"></script>
-<!-- <script src="assets/js_files/firestorer.js"></script> -->
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-crossorigin="anonymous"></script>
-
-<script src="assets/js_files/locator.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
+            authDomain: "the-intelligent-donor.firebaseapp.com",
+            databaseURL: "https://the-intelligent-donor.firebaseio.com",
+            projectId: "the-intelligent-donor",
+            storageBucket: "the-intelligent-donor.appspot.com",
+            messagingSenderId: "1031674462132",
+            appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
+            measurementId: "G-TFH9CVXTDG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <!--Custom JS-->
+    <script src="assets/js_files/find.js"></script>
+    <script src="assets/js_files/signout.js"></script>
+    <!-- <script src="assets/js_files/firestorer.js"></script> -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    
+    <script src="assets/js_files/locator.js"></script>
 </body>
 
 </html>
