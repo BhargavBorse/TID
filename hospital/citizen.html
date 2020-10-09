@@ -32,52 +32,13 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="user-feedback.html">User Feedback</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blood-stock.html">Blood Stock</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Hospital
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="add-hospital-detail.html">Add Hospital</a>
-                    <a class="dropdown-item" href="view-hospital.html">View Hospitals</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="feedback.html">Hospital Queries</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="donor-list.html">Donors</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="view-appt.html">View Appointment</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profile
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <span class="dropdown-item mr-1" style="color: black;" id="user_div">
-                        
-                    </span><hr>
-                    <a class="dropdown-item" href="change-password.html">Change Password</a> <hr>
-                    <center> <button class="btn btn-outline-danger my-2 my-sm-0" onclick="signOut();">Sign Out</button> </center>
-                </div>
-            </li>
-        </ul>
-    </div>
+    
 </nav>
 <div class="container" id="major">
     <div class="row">
         <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
         <div class="col-lg-12 d-flex justify-content-center" style="margin-top:25px;">
-            <h1 class="display-4" style="text-align:center;">Donor's List</h1>
+            <h1 class="display-4" style="text-align:center;">Appointment</h1>
         </div>
     </div>
     <div class="row">
@@ -90,12 +51,14 @@
                         </div>
                         <div class="col-md-10">
                             <div class="table-responsive">          
-                                <table class="table table-hover" id="donortable">
+                                <table class="table table-hover" id="appointmenttable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone Number</th>
+                                            <th>Appointment Date</th>
+                                            <th>Appointment Time</th>
+                                            <th>Hospital</th>
+                                            <th>Status</th>
+                                            <th>Remark</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -103,6 +66,7 @@
                                         
                                     </tbody>
                                 </table>
+                                <button class="btn btn-danger" onclick="backpg()">Back</button>
                             </div>
                             
                         </div>
@@ -145,7 +109,7 @@
 </script>
 
 <!--Custom JS-->
-<script src="js_files/donor-list.js"></script>
+<script src="js_files/citizen.js"></script>
 <script src="../assets/js_files/signout.js"></script>
 <!-- <script src="assets/js_files/firestorer.js"></script> -->
 

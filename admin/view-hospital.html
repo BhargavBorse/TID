@@ -41,19 +41,19 @@
                 <a class="nav-link" href="blood-stock.html">Blood Stock</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Hospital
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="add-hospital-detail.html">Add Hospital</a>
-                    <a class="dropdown-item" href="view-hospital.html">View Hospitals</a>
+                    <a class="dropdown-item" href="view-hospital.html"><u>View Hospitals</u></a>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="feedback.html">Hospital Queries</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="donor-list.html">Donors</a>
+                <a class="nav-link" href="donor-list.html">Donors</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="view-appt.html">View Appointment</a>
@@ -77,7 +77,7 @@
     <div class="row">
         <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
         <div class="col-lg-12 d-flex justify-content-center" style="margin-top:25px;">
-            <h1 class="display-4" style="text-align:center;">Donor's List</h1>
+            <h1 class="display-4" style="text-align:center;">Hospital's List    </h1>
         </div>
     </div>
     <div class="row">
@@ -90,12 +90,14 @@
                         </div>
                         <div class="col-md-10">
                             <div class="table-responsive">          
-                                <table class="table table-hover" id="donortable">
+                                <table class="table table-hover" id="hospitaltable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
+                                            <th>Hospital Name</th>
                                             <th>Email</th>
-                                            <th>Phone Number</th>
+                                            <th>Address</th>
+                                            <th>Zip</th>
+                                            <th>Phone No</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -145,7 +147,7 @@
 </script>
 
 <!--Custom JS-->
-<script src="js_files/donor-list.js"></script>
+<script src="js_files/view-hospital.js"></script>
 <script src="../assets/js_files/signout.js"></script>
 <!-- <script src="assets/js_files/firestorer.js"></script> -->
 

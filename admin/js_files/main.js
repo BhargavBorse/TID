@@ -13,3 +13,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         window.location.replace("index.html");
     }
 });
+
+function cpwd(){
+    window.location.replace("change-password.html");
+}
+

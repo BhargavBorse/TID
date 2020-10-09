@@ -19,7 +19,7 @@
     <!--Custom CSS-->
     <link type="text/css" rel="stylesheet" href="../assets/css/custom.css" />
     <title>The Intelligent Donor</title>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="../assets/image/favicon.png" />
 </head>
@@ -41,11 +41,11 @@
                 <a class="nav-link" href="blood-stock.html">Blood Stock</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Hospital
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="add-hospital-detail.html">Add Hospital</a>
+                    <a class="dropdown-item" href="add-hospital-detail.html"><u>Add Hospital</u></a>
                     <a class="dropdown-item" href="view-hospital.html">View Hospitals</a>
                 </div>
             </li>
@@ -53,7 +53,7 @@
                 <a class="nav-link" href="feedback.html">Hospital Queries</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="donor-list.html">Donors</a>
+                <a class="nav-link" href="donor-list.html">Donors</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="view-appt.html">View Appointment</a>
@@ -63,13 +63,27 @@
                     Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <span class="dropdown-item mr-1" style="color: black;" id="user_div">
+                    <span class="dropdown-item mr-1" id="user_div">
                         
                     </span><hr>
                     <a class="dropdown-item" href="change-password.html">Change Password</a> <hr>
                     <center> <button class="btn btn-outline-danger my-2 my-sm-0" onclick="signOut();">Sign Out</button> </center>
                 </div>
             </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <span class="nav-link mr-1" style="color: black;" id="user_div">
+                        
+                    </span>
+                    <hr>
+                    <button class="btn btn-outline-light my-2 my-sm-0" onclick="cpwd();">Change Password</button>
+                    <hr>
+                    <button class="btn btn-outline-light my-2 my-sm-0" onclick="signOut();">Sign Out</button>
+                </div>
+            </li> -->
         </ul>
     </div>
 </nav>
@@ -77,39 +91,54 @@
     <div class="row">
         <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
         <div class="col-lg-12 d-flex justify-content-center" style="margin-top:25px;">
-            <h1 class="display-4" style="text-align:center;">Donor's List</h1>
+            <h1 class="display-4" style="text-align:center;">Add hospital</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="card" style="margin-top:75px;">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-1">
-                            
-                        </div>
-                        <div class="col-md-10">
-                            <div class="table-responsive">          
-                                <table class="table table-hover" id="donortable">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone Number</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                    </tbody>
-                                </table>
+                    <h5 class="card-title">Information Form</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Fill your personal information in order to be notified when your blood type in needed in the vicinity!</h6>
+                    <p class="card-text">In order to know how we handle your information, please go through the Terms of Service and Privacy Policy stated below:</p>
+                    <a href="privacy.html" class="card-link text-danger">Privacy Policy</a>
+                    <a href="tos.html" class="card-link text-danger">Terms of Service</a>
+                    <p class="card-text">
+                        <form onreset="formReset()" id="detsForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Hospital Name</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPhNumber">Phone Number</label>
+                                    <input type="text" class="form-control" id="inputPhNumber" placeholder="Phone Number" required>
+                                </div>
                             </div>
-                            
-                        </div>
-                        <div class="col-md-1">
-                            
-                        </div>
-                    </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputEmail">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip" placeholder="Zip" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger mr-2" id="subBtn">Submit</button>
+                            <button type="reset" class="btn btn-secondary mr-2">Reset</button>
+                        </form>
+                    </p>
                 </div>
             </div>
         </div>
@@ -145,7 +174,7 @@
 </script>
 
 <!--Custom JS-->
-<script src="js_files/donor-list.js"></script>
+<script src="js_files/add-hospital-detail.js"></script>
 <script src="../assets/js_files/signout.js"></script>
 <!-- <script src="assets/js_files/firestorer.js"></script> -->
 

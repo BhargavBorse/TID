@@ -45,7 +45,7 @@
                     Hospital
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="add-hospital.html">Add Hospital</a>
+                    <a class="dropdown-item" href="add-hospital-detail.html">Add Hospital</a>
                     <a class="dropdown-item" href="view-hospital.html">View Hospitals</a>
                 </div>
             </li>
@@ -58,13 +58,17 @@
             <li class="nav-item">
                 <a class="nav-link active" href="view-appt.html">View Appointment</a>
             </li>
-            <li class="nav-item">
-                <span class="nav-link mr-1" id="user_div">
-                    
-                </span>
-            </li>
-            <li class="nav-item">
-                <button class="btn btn-outline-light my-2 my-sm-0" onclick="signOut();">Sign Out</button> 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <span class="dropdown-item mr-1" style="color: black;" id="user_div">
+                        
+                    </span><hr>
+                    <a class="dropdown-item" href="change-password.html">Change Password</a> <hr>
+                    <center> <button class="btn btn-outline-danger my-2 my-sm-0" onclick="signOut();">Sign Out</button> </center>
+                </div>
             </li>
         </ul>
     </div>
