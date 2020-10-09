@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#dc3545">
+    <!-- manifest file -->
+    <link rel="manifest" href="../manifest.json">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    
+    <!--FirebaseUI-->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    
+    <!--Custom CSS-->
+    <link type="text/css" rel="stylesheet" href="../assets/css/custom.css" />
+    <title>The Intelligent Donor</title>
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../assets/image/favicon.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="thenav">
+        <a class="navbar-brand" href="main.html">  The Intelligent Donor <span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="user-feedback.html">User Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blood-stock.html">Blood Stock</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Hospital
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="add-hospital.html">Add Hospital</a>
+                    <a class="dropdown-item" href="view-hospital.html">View Hospitals</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Hospital Queries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="donor-list.html">Donors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="view-appt.html">View Appointment</a>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link mr-1" id="user_div">
+                    
+                </span>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-light my-2 my-sm-0" onclick="signOut();">Sign Out</button> 
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="major">
+    <div class="row">
+        <!-- <img class="mx-auto d-block" src="assets/image/logo-01.png" height="250px" style="margin-top:15px;"> -->
+        <div class="col-lg-12 d-flex justify-content-center" style="margin-top:25px;">
+            <h1 class="display-4" style="text-align:center;">Appointment</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card" style="margin-top:75px;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-1">
+                            
+                        </div>
+                        <div class="col-md-10">
+                            <div class="table-responsive">          
+                                <table class="table table-hover" id="appointmenttable">
+                                    <thead>
+                                        <tr>
+                                            <th>Appointment Date</th>
+                                            <th>Appointment Time</th>
+                                            <th>Hospital</th>
+                                            <th>Status</th>
+                                            <th>Remark</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-1">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="loader" hidden="false">
+    <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+</div>
+<div class="mb-5">
+    
+</div>
+<!--FireBase integration-->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
+        authDomain: "the-intelligent-donor.firebaseapp.com",
+        databaseURL: "https://the-intelligent-donor.firebaseio.com",
+        projectId: "the-intelligent-donor",
+        storageBucket: "the-intelligent-donor.appspot.com",
+        messagingSenderId: "1031674462132",
+        appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
+        measurementId: "G-TFH9CVXTDG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<!--Custom JS-->
+<script src="js_files/view-appt.js"></script>
+<script src="../assets/js_files/signout.js"></script>
+<!-- <script src="assets/js_files/firestorer.js"></script> -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
+
+<script src="../assets/js_files/locator.js"></script>
+</body>
+
+</html>
