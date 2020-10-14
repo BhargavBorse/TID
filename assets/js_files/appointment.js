@@ -35,6 +35,21 @@ firebase.auth().onAuthStateChanged(function (user) {
                 var hospital = document.getElementById('inputHospital').value;
                 var status = document.getElementById('status').value;
                 var remark = document.getElementById('remark').value;
+
+                if (appointment_date == "") {
+                    alert("Select appointment date");
+                    return false;
+                }
+                else if(appointment_time == "")
+                {
+                    alert("Select appointment time");
+                    return false;
+                }
+                else if(hospital == "")
+                {
+                    alert("Choose hospital");
+                    return false;
+                }
                 database.child('donation').push({
                     appointment_date: appointment_date,
                     appointment_time: appointment_time,

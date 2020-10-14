@@ -30,6 +30,36 @@ document.getElementById('subBtn').onclick = function(){
     var encrypted = CryptoJS.AES.encrypt(password, "Secret Passphrase");
     console.log(encrypted.toString());
     
+
+    if (name == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    else if(email == "")
+    {
+        alert("Email must be filled out");
+        return false;
+    }
+    else if(phone_no == "")
+    {
+        alert("Phone number must be filled out");
+        return false;
+    }
+    else if(address == "")
+    {
+        alert("Address must be filled out");
+        return false;
+    }
+    else if(zip == "")
+    {
+        alert("Zip must be filled out");
+        return false;
+    }
+    else if(password == "")
+    {
+        alert("Password must be filled out");
+        return false;
+    }
     // var decrypted = CryptoJS.AES.decrypt(encrypted.toString(), "Secret Passphrase");
     // console.log(decrypted.toString(CryptoJS.enc.Utf8));
 

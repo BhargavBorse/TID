@@ -22,6 +22,18 @@
     
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="assets/image/favicon.png" />
+    
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet"
+    type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $("#txtdate").datepicker({
+                minDate: 0
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -85,7 +97,7 @@
                                 <div class="form-group col-md-6">
                                     <div class="form-group" id="apptDate">
                                         <label for="inputApptDate">Appointment Date</label>
-                                        <input type="date" id="inputApptDate" class="form-control">
+                                        <input type="text" id="inputApptDate" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
@@ -99,80 +111,92 @@
                                         <!-- <label for="inputApptTime">Appointment Time</label> -->
                                         <input type="text" id="status" class="form-control" value="Sent to Hospital" hidden>
                                         <input type="text" id="remark" class="form-control" value="Pending" hidden>
-                                    <!-- </div> -->
-                                <!-- </div> -->
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <div class="form-group">
-                                        <label for="inputHospital">Nearby Hospital</label>
-                                        <select id="inputHospital" class="form-control">
-                                            <option value="0" selected>None</option>
-                                            <option value="Indu Voluntary Blood Bank - Gotri Road">Indu Voluntary Blood Bank - Gotri Road</option>
-                                            <option value="Shri Jalaram Blood Bank - Harni Road">Shri Jalaram Blood Bank - Harni Road</option>
-                                            <option value="Citizen Blood Bank - New VIP">Citizen Blood Bank - New VIP</option>
-                                            <option value="Indian Blood Service - Manjalpur">Indian Blood Service - Manjalpur</option>
-                                            <option value="Kailash Cancer Hospital - Fatehgunj">Kailash Cancer Hospital - Fatehgunj</option>
-                                            <option value="SSG Hospital - Jail Road">SSG Hospital - Jail Road</option>
-                                            <option value="SunPharma - SunPharma Road">SunPharma - SunPharma Road</option>
-                                        </select>
+                                        <!-- </div> -->
+                                        <!-- </div> -->
                                     </div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-danger mr-2" id="subBtn">Set Appointment</button>
-                            <button type="reset" class="btn btn-secondary mr-2">Reset</button>
-                            <button type="button" id="back" class="btn btn-info">Back</button>
-                        </form>
-                    </p>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <div class="form-group">
+                                                <label for="inputHospital">Nearby Hospital</label>
+                                                <select id="inputHospital" class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="None">None</option>
+                                                    <option value="Indu Voluntary Blood Bank - Gotri Road">Indu Voluntary Blood Bank - Gotri Road</option>
+                                                    <option value="Shri Jalaram Blood Bank - Harni Road">Shri Jalaram Blood Bank - Harni Road</option>
+                                                    <option value="Citizen Blood Bank - New VIP">Citizen Blood Bank - New VIP</option>
+                                                    <option value="Indian Blood Service - Manjalpur">Indian Blood Service - Manjalpur</option>
+                                                    <option value="Kailash Cancer Hospital - Fatehgunj">Kailash Cancer Hospital - Fatehgunj</option>
+                                                    <option value="SSG Hospital - Jail Road">SSG Hospital - Jail Road</option>
+                                                    <option value="SunPharma - SunPharma Road">SunPharma - SunPharma Road</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-danger mr-2" id="subBtn">Set Appointment</button>
+                                    <button type="reset" class="btn btn-secondary mr-2">Reset</button>
+                                    <button type="button" id="back" class="btn btn-info">Back</button>
+                                </form>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div id="loader" hidden="false">
-    <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
-</div>
-<div class="mb-5">
+        <div id="loader" hidden="false">
+            <img src="https://media1.tenor.com/images/df0202d5f0e4b84e180615c72c4d5627/tenor.gif?itemid=7225569">
+        </div>
+        <div class="mb-5">
+            
+        </div>
+        <!--FireBase integration-->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        
+        
+        <script>
+            var today = new Date();
+            
+            $("#inputApptDate").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                minDate: today // set the minDate to the today's date
+                // you can add other options here
+            });
+        </script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
+                authDomain: "the-intelligent-donor.firebaseapp.com",
+                databaseURL: "https://the-intelligent-donor.firebaseio.com",
+                projectId: "the-intelligent-donor",
+                storageBucket: "the-intelligent-donor.appspot.com",
+                messagingSenderId: "1031674462132",
+                appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
+                measurementId: "G-TFH9CVXTDG"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        
+        <!--Custom JS-->
+        <script src="assets/js_files/appointment.js"></script>
+        <script src="assets/js_files/signout.js"></script>
+        <!-- <script src="assets/js_files/firestorer.js"></script> -->
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        
+        <script src="assets/js_files/locator.js"></script>
+    </body>
     
-</div>
-<!--FireBase integration-->
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCQXVknGc7A2KMRGxtdi7vfWkd6QnTYddw",
-        authDomain: "the-intelligent-donor.firebaseapp.com",
-        databaseURL: "https://the-intelligent-donor.firebaseio.com",
-        projectId: "the-intelligent-donor",
-        storageBucket: "the-intelligent-donor.appspot.com",
-        messagingSenderId: "1031674462132",
-        appId: "1:1031674462132:web:4426c9746e4e519a8ebce1",
-        measurementId: "G-TFH9CVXTDG"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
-
-<!--Custom JS-->
-<script src="assets/js_files/appointment.js"></script>
-<script src="assets/js_files/signout.js"></script>
-<!-- <script src="assets/js_files/firestorer.js"></script> -->
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-crossorigin="anonymous"></script>
-
-<script src="assets/js_files/locator.js"></script>
-</body>
-
-</html>
+    </html>

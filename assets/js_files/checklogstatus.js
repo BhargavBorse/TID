@@ -62,6 +62,60 @@ firebase.auth().onAuthStateChanged(function (user) {
                 var disease = document.getElementById('inputDiseases').value;
                 var disease_date = document.getElementById('inputDiseasesDate').value;
                 
+                if (name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                else if(email == "")
+                {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                else if(phone_no == "")
+                {
+                    alert("Phone number must be filled out");
+                    return false;
+                }
+                else if(address == "")
+                {
+                    alert("Address must be filled out");
+                    return false;
+                }
+                else if(zip == "")
+                {
+                    alert("Zip must be filled out");
+                    return false;
+                }
+                else if(blood_group == "")
+                {
+                    alert("Blood Group must be filled out");
+                    return false;
+                }
+                else if(gender == "")
+                {
+                    alert("Gender must be filled out");
+                    return false;
+                }
+                else if(condition == "")
+                {
+                    alert("Condition must be filled out");
+                    return false;
+                }
+                else if(conditions_date == "")
+                {
+                    alert("Condition date must be filled out");
+                    return false;
+                }
+                else if(disease == "")
+                {
+                    alert("Disease must be filled out");
+                    return false;
+                }
+                else if(disease_date == "")
+                {
+                    alert("Disease date must be filled out");
+                    return false;
+                }
                 database.child(user.uid).child('user_details').update({
                     name: name,
                     email: email,

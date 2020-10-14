@@ -53,12 +53,39 @@ firebase.auth().onAuthStateChanged(function(user) {
             // }
             
             // alert(time);
+
+            
             var name = document.getElementById('inputName').value;
             var email = document.getElementById('inputEmail').value;
             var phone_no = document.getElementById('inputPhNumber').value;
             var subject = document.getElementById('inputSubject').value;
             var message = document.getElementById('message').value;
             // alert(message_for);
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            else if(email == "")
+            {
+                alert("Email must be filled out");
+                return false;
+            }
+            else if(phone_no == "")
+            {
+                alert("Phone number must be filled out");
+                return false;
+            }
+            else if(subject == "")
+            {
+                alert("Subject must be filled out");
+                return false;
+            }
+            else if(message == "")
+            {
+                alert("Message must be filled out");
+                return false;
+            }
             database.child('Feedback').push({
                 id: user.uid,
                 name: name, 
