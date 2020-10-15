@@ -38,6 +38,12 @@ document.getElementById('subBtn').onclick = function(){
         alert("Phone number must be filled out");
         return false;
     }
+    else if(phone_no.length != 10)
+    {
+        alert("Phone number is in wrong format ");
+        phone_no.focus();
+        return false;
+    }
     else if(subject == "")
     {
         alert("Subject must be filled out");

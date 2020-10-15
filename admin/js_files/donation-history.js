@@ -19,7 +19,7 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 
 var id = url.searchParams.get("id");
-alert(id);
+// alert(id);
 firebase.database().ref().child('donation').on('child_added',function(donation_snapshot){
     var donationId = donation_snapshot.child('userId').val();
     if(donationId === id)

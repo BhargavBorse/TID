@@ -76,6 +76,18 @@ firebase.auth().onAuthStateChanged(function (user) {
                     alert("Phone number must be filled out");
                     return false;
                 }
+                else if(phone_no.length != 10)
+                {
+                    alert("Phone number is in wrong format ");
+                    phone_no.focus();
+                    return false;
+                }
+                else if(zip.length != 6)
+                {
+                    alert("Please check the format of zip code");
+                    zip.focus();
+                    return false;
+                }
                 else if(address == "")
                 {
                     alert("Address must be filled out");
@@ -86,6 +98,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                     alert("Zip must be filled out");
                     return false;
                 }
+                
                 else if(blood_group == "")
                 {
                     alert("Blood Group must be filled out");
